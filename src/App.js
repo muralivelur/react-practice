@@ -1,5 +1,8 @@
 import React, { Component, Fragment } from 'react';
-import { Greeting } from './components/Greeting';
+//normal export - check the name of it
+import { Greeting as AnotherGreeting } from './components/Greeting';
+//default export
+import Greeting from './components/Greeting';
 import './style.css';
 
 //class App extends React.Component {}
@@ -10,6 +13,7 @@ class App extends Component {
         <h1>Welcome Murali Bro !!!</h1>
         <Greeting name="sathwik" />
         <Greeting name="my dear !!!" />
+        <AnotherGreeting name="React" />
       </Fragment>
     );
   }

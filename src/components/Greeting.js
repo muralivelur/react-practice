@@ -7,7 +7,15 @@ import React, { Component } from 'react';
   }
 }*/
 
-function Greeting(props) {
+/*function Greeting(props) {
+  return <h2> Good Morning {props.name}</h2>;
+}*/
+
+/*const Greeting = (props) => {
+  return <h2> Good Morning {props.name}</h2>;
+}*/
+
+export default function Greeting(props) {
   return <h2> Good Morning {props.name}</h2>;
 }
 
