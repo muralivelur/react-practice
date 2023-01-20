@@ -1,20 +1,18 @@
 import React, { Component, Fragment } from 'react';
-//normal export - check the name of it
-import { Greeting as AnotherGreeting } from './components/Greeting';
-//default export
-import Greeting from './components/Greeting';
+import { UserInfo } from './components/UserInfo';
+import { person1, person2 } from './person';
 import './style.css';
 
 //class App extends React.Component {}
 class App extends Component {
   render() {
     return (
-      <Fragment>
-        <h1>Welcome Murali Bro !!!</h1>
-        <Greeting name="sathwik" />
-        <Greeting name="my dear !!!" />
-        <AnotherGreeting name="React" />
-      </Fragment>
+      <main>
+        <h1> Members </h1>
+        <UserInfo {...person1} />
+        <hr />
+        <UserInfo {...person2} />
+      </main>
     );
   }
 }
