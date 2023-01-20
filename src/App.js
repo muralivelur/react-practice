@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Greeting } from './components/Greeting';
+import { UserInfo } from './components/UserInfo';
 import './style.css';
 
 class App extends Component {
@@ -17,10 +18,10 @@ class App extends Component {
       <main>
         <h1> Members {this.state.name}</h1>
         <Greeting name={this.state.name} />
+        <UserInfo name={his.state.name} />
         <button onClick={this.changeState}> Change me</button>
       </main>
     );
   }
 }
-
 export default App;
