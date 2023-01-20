@@ -23,6 +23,29 @@ class App extends Component {
       </main>
     );
   }
+
+  /*
+  
+const customer = {name:"Sai", address:{city:"global", state:"Universe"}};
+
+function displayName(text) {
+  console.log(`Argument : ${text} this reference property : ${this.name}`);
+}
+
+//bind
+  const bindDisplayMethod = displayName.bind(customer);
+  bindDisplayMethod("Hello");
+
+//call
+displayName.call(customer, "argument");
+
+//apply
+function displayName(text, text1, text2) {
+  console.log(`Argument : ${...arguments} this reference property : ${this.name}`);
+  console.log(`Argument : ${text} ${text1} ${text2}`);
+}
+displayName.apply(customer, ["Hi","Hello","Me"]);
+*/
 }
 
 export default App;
