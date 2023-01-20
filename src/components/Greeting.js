@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 export default function Greeting(props) {
   return <h2> Good Morning {props.name}</h2>;

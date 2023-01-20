@@ -6,6 +6,7 @@ export const UserInfo = (props) => {
     <Fragment>
       <Greeting name={props.user.name} />
       <Address address={props.address} />
+      <hr />
     </Fragment>
   );
 };
