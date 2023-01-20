@@ -20,6 +20,8 @@ class App extends Component {
         <UserInfo {...person1} />
         <UserInfo {...person2} />
         <button onClick={this.updateName}> Change Me</button>
+        
+        <button onClick={this.changeName.bind(this)}> Another Change Me</button>
       </main>
     );
   }
