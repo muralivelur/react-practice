@@ -13,6 +13,11 @@ class App extends Component {
   changeName() {
     this.setState({ name: 'Sodimac' });
   }
+
+  changeState = () => {
+    this.setState({ name: 'Sodimac' });
+  };
+
   render() {
     return (
       <main>
@@ -20,8 +25,13 @@ class App extends Component {
         <UserInfo {...person1} />
         <UserInfo {...person2} />
         <button onClick={this.updateName}> Change Me</button>
-        
+
         <button onClick={this.changeName.bind(this)}> Another Change Me</button>
+
+        {/* in-line arrow function are performance in-effiective. always creates new function references*/}
+        <button onClick={() => this.changeName()}> In-line anonymous</button>
+
+        <button onClick={this.changeState}> Arrow function</button>
       </main>
     );
   }
