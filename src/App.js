@@ -14,6 +14,7 @@ class App extends Component {
     this.setState({ name: 'Sodimac' });
   }
 
+  //comment the bind in the constructor if we use this method
   changeState = () => {
     this.setState({ name: 'Sodimac' });
   };
