@@ -12,8 +12,10 @@ class App extends Component {
   //constructor also can be removed and keep the state defined out of the constructor
 
   state = { name: 'Falabella' };
-  changeState = () => {
-    this.setState({ name: 'Sodimac' });
+
+  // closure
+  changeState = (nameValue) => () => {
+    this.setState({ name: nameValue });
   };
 
   componentWillMount() {
@@ -26,8 +28,8 @@ class App extends Component {
     return (
       <main>
         <h1> Members {this.state.name}</h1>
-        <Greeting name={this.state.name} />
-        <button onClick={this.changeState}> Change me</button>
+        <Greeting name={this.state.name} updateName={this.changeState} />
+        <button onClick={this.changeState('Sodimac')}> Change me</button>
       </main>
     );
   }
