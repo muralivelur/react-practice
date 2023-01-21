@@ -18,6 +18,11 @@ class App extends Component {
     this.setState({ name: nameValue });
   };
 
+  updateState = (event) => {
+    const textBoxValue = event.target.value;
+    this.setState({ name: textBoxValue });
+  };
+
   componentWillMount() {
     console.log("I'm about to mounted");
   }
@@ -29,6 +34,11 @@ class App extends Component {
       <main>
         <h1> Members {this.state.name}</h1>
         <Greeting name={this.state.name} updateName={this.changeState} />
+        <input
+          name="stateChangeTextBox"
+          value={this.state.name}
+          onChange={this.updateState}
+        />
         <button onClick={this.changeState('Sodimac')}> Change me</button>
       </main>
     );
