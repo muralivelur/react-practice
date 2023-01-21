@@ -19,6 +19,7 @@ class App extends Component {
   };
 
   updateState = (event) => {
+    console.log(event);
     const textBoxValue = event.target.value;
     this.setState({ name: textBoxValue });
   };
